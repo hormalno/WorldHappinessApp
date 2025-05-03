@@ -1,0 +1,1 @@
+from .merge_data import get_all_data

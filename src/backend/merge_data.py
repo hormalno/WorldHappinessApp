@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.backend.clean_data import clean_data_2015, clean_data_2016
+from .clean_data import clean_data_2015, clean_data_2016
 
 
 def get_all_data():

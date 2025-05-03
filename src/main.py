@@ -1,6 +1,6 @@
 import streamlit as st
 
-
+from backend import get_all_data
 
 data = get_all_data()
 st.write(data)

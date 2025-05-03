@@ -29,6 +29,7 @@ A simple Python app that loads and cleans the data from the csv and shows inform
 ```bash
 git clone https://github.com/hormalno/WorldHappinessApp
 cd WorldHappinessApp
+cd src
 
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
