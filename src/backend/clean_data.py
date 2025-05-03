@@ -25,6 +25,11 @@ def clean_data(csv):
     #drop columns that are not part of the frame
     df = df.drop(columns=[col for col in df.columns if col not in MAPPING.keys()])
 
+    #fill in the dystopian residual for the missing column
+    if "dyst_res" not in df.columns:
+        df['dyst_res'] = (df['happiness_score']
+                          - df[['economy', 'family', 'health', 'freedom', 'trust', 'generosity']].sum(axis=1))
+
     return df
 
 def column_mapping(df):

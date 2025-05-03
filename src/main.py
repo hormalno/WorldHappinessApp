@@ -1,25 +1,16 @@
 import streamlit as st
 
-from backend import get_all_data
+#set layout to wide
+st.set_page_config(layout="wide")
 
-data = get_all_data()
-st.write('2015')
-st.write(data[0])
-st.write('2016')
-st.write(data[1])
-st.write('2017')
-st.write(data[2])
-st.write('2018')
-st.write(data[3])
-st.write('2019')
-st.write(data[4])
+#add pages
+table = st.Page("frontend/happiness_table.py", title="Tables")
+charts = st.Page("frontend/charts.py", title="Charts")
+contact_us = st.Page("frontend/contact_us.py", title="Contact US")
+pg = st.navigation([table, charts, contact_us])
 
-# chart_data = pd.DataFrame(
-#     np.random.randn(20, 3),
-#     columns=["a", "b", "c"]
-# )
-#
-# st.button("asd")
-# st.write("Hello World!")
-# st.write(df)
-# st.bar_chart(chart_data)
+#add the sidebar
+st.sidebar.selectbox("Group", ["A","B","C"], key="group")
+st.sidebar.slider("Size", 1, 5, key="size")
+
+pg.run()
