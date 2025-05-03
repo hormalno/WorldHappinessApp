@@ -1,17 +1,44 @@
 import pandas as pd
 
-filepath = "backend/data/"
-df_2015 = pd.read_csv(filepath+"2015.csv")
-# df_2016 = pd.read_csv("data/2016.csv")
-# df_2017 = pd.read_csv("data/2017.csv")
-# df_2018 = pd.read_csv("data/2018.csv")
-# df_2019 = pd.read_csv("data/2019.csv")
+FILEPATH = "backend/data/"
+MAPPING = {
+    "country": "country",
+    "region": "region",
+    "happiness_rank": "rank",
+    "happiness_score": "score",
+    "economy": "economy,gdp",
+    "family": "family,support",
+    "health": "health",
+    "freedom": "freedom",
+    "trust": "trust,corruption",
+    "generosity": "generosity",
+    "dyst_res": "dystopia,residual"
+}
 
-# df_2015.rename(columns="Happiness Rank": "")
-# df_2015.drop_duplicates(subset=['Country'])
+def clean_data(csv):
+    #read data from csv
+    df = pd.read_csv(FILEPATH+csv)
 
-def clean_data_2015():
-    return df_2015
+    #rename column names
+    df = column_mapping(df)
 
-def clean_data_2016():
-    return df_2015
+    #drop columns that are not part of the frame
+    df = df.drop(columns=[col for col in df.columns if col not in MAPPING.keys()])
+
+    return df
+
+def column_mapping(df):
+    new_columns = {}
+
+    for col in df.columns:
+        new_col_name = rename_column(col)
+        if new_col_name:
+            new_columns[col] = new_col_name
+    return df.rename(columns=new_columns)
+
+def rename_column(col):
+    for key, value in MAPPING.items():
+        for col_name in value.split(','):
+            if col_name in col.lower():
+                return key
+    return None
