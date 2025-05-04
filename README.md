@@ -1,41 +1,56 @@
-# World Happiness App
+# 🌍 World Happiness Report Streamlit App
 
-A simple Python app that loads and cleans the data from the csv and shows information with simple filtering and exploration
+This interactive Streamlit application visualizes and explores data from the **World Happiness Report**. It enables users to explore happiness metrics from 2015 to 2019 by country and region, as well as view rankings of the happiest and least happy countries.
 
-## 🌦 Features
+## 📦 Built With
 
-- Visualize happiness scores across countries, regions, and time
-- Select a year (if using multi-year data)
-- Filter by region or country
-- View happiness rankings
-- Display top N happiest countries
-- Display bottom N countries
-- Plot correlations between score components and happiness score
-- Bonus:
-[//]: # (Time trend visualizations &#40;if using multi-year&#41;)
+- **Python**
+- **Pandas**
+- **Streamlit**
 
-[//]: # (Display &#40;your&#41; statistical insights &#40;e.g., "most influential factor"&#41;)
+## 🔍 Features
 
-[//]: # (Add explanations or hover-tooltips for variables)
+### 📄 WORLD HAPPINESS REPORT
 
-[//]: # (Change the default color scheme to something that you like.)
+- View full dataset from 2015 to 2019
+- Filter data by **Country** and **Region**
+- Select specific **Year** to analyze historical trends
 
-[//]: # (Do a multi-page app.)
+### 📊 HAPPINESS RANKING
+
+- View the top **N** happiest countries
+- View the **N** least happy countries
+- Customize the number of countries to display
+
+### 📈 CHARTS _(Coming Soon)_
+
+- Data visualizations and charts for deeper insights (under development)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Python 3.11+
+- pip
 
 
 ## 🚀 Installation
 
 1. Clone the repository:
-```bash
+--bash
 git clone https://github.com/hormalno/WorldHappinessApp
 cd WorldHappinessApp
 cd src
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
+2. Install dependencies:
+--bash
 pip install -r requirements.txt
 
-## Usage
-To run the app from the command line:
+3. Run the Streamlit app:
 streamlit run main.py
+
+
+## 📬 Contact
+If you have any suggestions, questions, or would like to contribute, feel free to reach out or create an issue!

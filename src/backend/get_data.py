@@ -24,12 +24,24 @@ def get_all_data_by_country(country):
     df = get_all_data()
     return df[df['country'] == country]
 
-def get_all_countries():
+def get_data_by_year_and_region(year, region):
+    df = get_data_by_year(year)
+    return df[df['region'] == region]
+
+def get_all_data_by_region(region):
     df = get_all_data()
+    return df[df['region'] == region]
+
+def get_all_region():
+    df = get_all_data()
+    return sorted(df['region'].unique().tolist())
+
+def get_all_country(region=None):
+    df = get_all_data()
+
+    if region:
+        return sorted(df[df['region'] == region]['country'].unique())
 
     return sorted(df['country'].unique().tolist())
 
-def get_all_regions():
-    df = get_all_data()
-    return ["asd", "asddff"]
-    # return sorted(df['region'].unique().tolist())
+

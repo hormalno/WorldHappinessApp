@@ -11,6 +11,7 @@ def reformat(df):
     if "region_x" in df.columns and "region_y" in df.columns:
         df.insert(1, "region", df['region_x'].combine_first(df['region_y']))
         df = df.drop(columns=['region_x', 'region_y'])
+        df['region'] = df['region'].fillna('N/A').astype(str)
 
     score_columns = ["economy", "family", "health", "freedom", "trust", "generosity", "dyst_res"]
 
@@ -27,7 +28,6 @@ def reformat(df):
     df = df.drop(columns=['happiness_rank_x', 'happiness_rank_y'])
     df.insert(2, "happiness_rank", df['happiness_score'].rank(ascending=False, method='min').astype(int))
 
-    #sort by rank and drop the index
-    df = df.sort_values('happiness_rank')
+
 
     return df

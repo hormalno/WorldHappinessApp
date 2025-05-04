@@ -30,6 +30,16 @@ def clean_data(csv):
         df['dyst_res'] = (df['happiness_score']
                           - df[['economy', 'family', 'health', 'freedom', 'trust', 'generosity']].sum(axis=1))
 
+    #fill in the region for the missing column
+    if "region" not in df.columns:
+        df_2015 = pd.read_csv(FILEPATH+"2015.csv")
+        df_2015 = df_2015.rename(columns={"Country":"country", "Region": "region"})
+        df = df.merge(df_2015[['country', 'region']],on='country',how='left')
+        df['region'] = df['region'].fillna('N/A')
+
+    #reorder columns
+    df = df[MAPPING.keys()]
+
     return df
 
 def column_mapping(df):
