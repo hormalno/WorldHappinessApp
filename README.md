@@ -38,18 +38,21 @@ Ensure you have the following installed:
 
 ## 🚀 Installation
 
-1. Clone the repository:
---bash
-git clone https://github.com/hormalno/WorldHappinessApp
-cd WorldHappinessApp
-cd src
+1. Clone the repository:  
+--bash--  
+&nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/hormalno/WorldHappinessApp  
+&nbsp;&nbsp;&nbsp;&nbsp;cd WorldHappinessApp  
+&nbsp;&nbsp;&nbsp;&nbsp;cd src 
 
-2. Install dependencies:
---bash
-pip install -r requirements.txt
 
-3. Run the Streamlit app:
-streamlit run main.py
+2. Install dependencies:  
+--bash--  
+&nbsp;&nbsp;&nbsp;&nbsp;pip install -r requirements.txt  
+
+
+3. Run the Streamlit app:  
+--bash--  
+&nbsp;&nbsp;&nbsp;&nbsp;streamlit run main.py
 
 
 ## 📬 Contact
