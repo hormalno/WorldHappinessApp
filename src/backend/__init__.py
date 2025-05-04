@@ -1,1 +1,1 @@
-from .merge_data import get_all_data
+from .get_data import *
