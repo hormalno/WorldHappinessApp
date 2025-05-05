@@ -15,9 +15,9 @@ MAPPING = {
     "dyst_res": "dystopia,residual"
 }
 
-def clean_data(csv):
+def clean_data(arg):
     #read data from csv
-    df = pd.read_csv(FILEPATH+csv)
+    df = pd.read_csv(FILEPATH+str(arg)+".csv")
 
     #rename column names
     df = column_mapping(df)

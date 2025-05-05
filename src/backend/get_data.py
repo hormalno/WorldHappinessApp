@@ -1,16 +1,19 @@
+import streamlit as st
+import pandas as pd
+
 from functools import reduce
 from .clean_data import clean_data
 from .merge_data import merge_and_reformat
 
 def get_data_by_year(year):
-    return clean_data(str(year)+".csv")
+    return clean_data(year)
 
 def get_all_data():
-    df_2015 = get_data_by_year("2015")
-    df_2016 = get_data_by_year("2016")
-    df_2017 = get_data_by_year("2017")
-    df_2018 = get_data_by_year("2018")
-    df_2019 = get_data_by_year("2019")
+    df_2015 = get_data_by_year(2015)
+    df_2016 = get_data_by_year(2016)
+    df_2017 = get_data_by_year(2017)
+    df_2018 = get_data_by_year(2018)
+    df_2019 = get_data_by_year(2019)
 
     merged_df = reduce(merge_and_reformat, [df_2015, df_2016, df_2017, df_2018, df_2019])
 
@@ -44,4 +47,11 @@ def get_all_country(region=None):
 
     return sorted(df['country'].unique().tolist())
 
-
+@st.cache_data
+def get_all_years():
+    dfs = []
+    for year in range(2015, 2020):
+        df = clean_data(year)
+        df["year"] = year
+        dfs.append(df[["country", "happiness_score", "year"]])
+    return pd.concat(dfs)
