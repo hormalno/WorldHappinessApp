@@ -3,6 +3,7 @@ import streamlit as st
 #set layout to wide
 st.set_page_config(layout="wide")
 
+
 #add pages
 table = st.Page("frontend/happiness_table.py", title="Report")
 ranking = st.Page("frontend/ranking.py", title="Ranking")
