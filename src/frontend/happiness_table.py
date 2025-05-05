@@ -72,5 +72,5 @@ for i, tab in enumerate(tabs):
                     tab.dataframe(get_all_data_by_region(selected_region),
                                   column_config=layout_table(), use_container_width=True, hide_index=True)
                 else:
-                    tab.dataframe(get_data_by_year_and_region(tab_labels[i], selected_country),
+                    tab.dataframe(get_data_by_year_and_region(tab_labels[i], selected_region),
                                   column_config=layout_table(), use_container_width=True, hide_index=True)
