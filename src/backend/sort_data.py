@@ -1,4 +1,4 @@
-from backend import get_all_data
+from src.backend import get_all_data
 
 def sort_all_data_by_rank_asc():
     df = get_all_data()

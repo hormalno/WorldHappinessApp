@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import stats
 
-from backend import get_all_data
+from src.backend import get_all_data
 
 #heador of the page
 st.header("WORLD HAPPINESS PLOT CORRELATION")

@@ -2,7 +2,8 @@
 FROM python:3.11-slim
 
 # Environment variables for Streamlit
-ENV PYTHONUNBUFFERED=1 \
+ENV PYTHONPATH="/app/src" \
+    PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
     STREAMLIT_SERVER_PORT=8501 \
     STREAMLIT_SERVER_HEADLESS=true \
@@ -16,7 +17,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy the full project (including src/)
-COPY . .
+COPY ./src /app/src
 
 # Expose default Streamlit port
 EXPOSE 8501

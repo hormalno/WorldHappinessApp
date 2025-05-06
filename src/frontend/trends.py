@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-from backend import get_all_years
+from src.backend import get_all_years
 
 #heador of the page
 st.header("WORLD HAPPINESS TREND")

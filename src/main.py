@@ -1,4 +1,9 @@
 import streamlit as st
+import sys
+import os
+
+# Add the root directory to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 #set layout to wide
 st.set_page_config(layout="wide")

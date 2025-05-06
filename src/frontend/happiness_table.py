@@ -1,7 +1,7 @@
 import streamlit as st
-from backend import get_all_data, get_data_by_year, get_all_data_by_country, get_data_by_year_and_country, \
+from src.backend import get_all_data, get_data_by_year, get_all_data_by_country, get_data_by_year_and_country, \
     get_all_data_by_region, get_data_by_year_and_region, get_all_region, get_all_country
-from frontend.col_config import layout_table
+from src.frontend.col_config import layout_table
 
 #heador of the page
 st.header("WORLD HAPPINESS REPORT")

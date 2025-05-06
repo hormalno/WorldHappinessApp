@@ -1,6 +1,6 @@
 import pandas as pd
 
-FILEPATH = "backend/data/"
+FILEPATH = "src/backend/data/"
 MAPPING = {
     "country": "country",
     "region": "region",

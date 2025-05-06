@@ -1,7 +1,7 @@
 import streamlit as st
 
-from backend import sort_all_data_by_rank_asc, sort_all_data_by_rank_desc
-from frontend.col_config import layout_table
+from src.backend import sort_all_data_by_rank_asc, sort_all_data_by_rank_desc
+from src.frontend.col_config import layout_table
 
 #heador of the page
 st.header("WORLD HAPPINESS RANKING")
