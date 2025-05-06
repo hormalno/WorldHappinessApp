@@ -62,9 +62,7 @@ Ensure you have the following installed:
 
 3. Run the Streamlit app:  
 --bash--  
-&nbsp;&nbsp;&nbsp;&nbsp;cd src  
-&nbsp;&nbsp;&nbsp;&nbsp;streamlit run main.py  
-
+&nbsp;&nbsp;&nbsp;&nbsp;python run.py
 
 
 ## 📬 Contact
