@@ -2,6 +2,8 @@
 
 This interactive Streamlit application visualizes and explores data from the **World Happiness Report**. It enables users to explore happiness metrics from 2015 to 2019 by country and region, as well as view rankings of the happiest and least happy countries.
 
+The app is hosted on Azure Cloud with CI/CD integration. Link: https://worldhappinessapp-e3ecbwb4dkf9ggdg.eastasia-01.azurewebsites.net/
+
 ## 📦 Built With
 
 - **Python**
