@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.header("Contact US")
+st.header("CONTACT US")
 st.write("email: .....@....")

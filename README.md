@@ -7,6 +7,9 @@ This interactive Streamlit application visualizes and explores data from the **W
 - **Python**
 - **Pandas**
 - **Streamlit**
+- **Matplotlib**
+- **Seaborn**
+- **SciPy**
 
 ## 🔍 Features
 
@@ -14,17 +17,25 @@ This interactive Streamlit application visualizes and explores data from the **W
 
 - View full dataset from 2015 to 2019
 - Filter data by **Country** and **Region**
-- Select specific **Year** to analyze historical trends
+- View happiness ranking for top N countries on top and bottom of the happiness score
+
+### ABOUT
+
+- Quick summary of the World Happiness Report and how it's calculated 
 
 ### 📊 HAPPINESS RANKING
 
 - View the top **N** happiest countries
 - View the **N** least happy countries
-- Customize the number of countries to display
 
-### 📈 CHARTS _(Coming Soon)_
+### 📈 PLOT CORRELATION
 
-- Data visualizations and charts for deeper insights (under development)
+- See the plot correlation between score components and happiness score
+- See the statistical insight based on the Pearson coefficient
+
+### 📈 TRENDS 
+
+- Select specific **Country** to analyze historical trends of the happiness score
 
 ## 🚀 Getting Started
 
@@ -41,8 +52,7 @@ Ensure you have the following installed:
 1. Clone the repository:  
 --bash--  
 &nbsp;&nbsp;&nbsp;&nbsp;git clone https://github.com/hormalno/WorldHappinessApp  
-&nbsp;&nbsp;&nbsp;&nbsp;cd WorldHappinessApp  
-&nbsp;&nbsp;&nbsp;&nbsp;cd src 
+&nbsp;&nbsp;&nbsp;&nbsp;cd WorldHappinessApp
 
 
 2. Install dependencies:  
@@ -52,7 +62,9 @@ Ensure you have the following installed:
 
 3. Run the Streamlit app:  
 --bash--  
-&nbsp;&nbsp;&nbsp;&nbsp;streamlit run main.py
+&nbsp;&nbsp;&nbsp;&nbsp;cd src  
+&nbsp;&nbsp;&nbsp;&nbsp;streamlit run main.py  
+
 
 
 ## 📬 Contact
